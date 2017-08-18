@@ -1,9 +1,9 @@
 package com.kodilla.testing.collection;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class OddNumbersExterminator {
-
+public class OddNumbersExterminator1 {
     ArrayList<Integer> list = new ArrayList<Integer>();
 
     public void exterminate(ArrayList<Integer> numbers) {
