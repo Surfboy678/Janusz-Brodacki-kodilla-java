@@ -8,8 +8,8 @@ public class StreamMovieMain {
         MovieStore movieStore = new MovieStore();
 
        String theResultStringOfMovieStore =  movieStore.getList().stream()
-               .map(Movie :: toString)
-               .collect(Collectors.joining("!","<<",">>"));
+               .map(Movie::toString)
+               .collect(Collectors.joining("!", "<<", ">>"));
 
        System.out.println(theResultStringOfMovieStore);
     }
