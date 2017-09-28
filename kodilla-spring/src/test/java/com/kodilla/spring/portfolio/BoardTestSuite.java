@@ -55,7 +55,7 @@ import java.util.stream.Stream;
         Assert.assertEquals(board.getInProgressList().getTasks().get(0),"Task 2");
 
         Assert.assertEquals(board.getDoneList().getTasks().size(),1);
-        Assert.assertEquals(board.getToDoList().getTasks().get(0),"Task 3");
+        Assert.assertEquals(board.getDoneList().getTasks().get(0),"Task 3");
         }
     }
 
