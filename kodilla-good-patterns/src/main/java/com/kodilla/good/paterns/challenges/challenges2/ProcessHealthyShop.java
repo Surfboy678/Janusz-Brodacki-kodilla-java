@@ -5,7 +5,12 @@ public class ProcessHealthyShop  {
         ProductHealthyShop productHealthyShop = new ProductHealthyShop("Healthy Shop","Food" ,4);
         productHealthyShop.getQuantityProduct();
 
+
         System.out.print( productHealthyShop);
+
+
+
+
     }
 
 

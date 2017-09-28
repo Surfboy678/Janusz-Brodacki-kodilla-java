@@ -9,11 +9,10 @@ public class Application {
 
         System.out.println(" ");
 
-
         OrderInformation orderInformation = new OrderInformation();
         orderInformation.order();
 
-        System.out.println(" ");
+        System.out.println(orderInformation);
 
 
 

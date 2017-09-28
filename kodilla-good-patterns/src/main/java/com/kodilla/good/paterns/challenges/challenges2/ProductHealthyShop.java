@@ -25,7 +25,7 @@ public class ProductHealthyShop {
 
     @Override
     public String toString() {
-        return "Name Shop:" + "" + nameShop +
+        return "Name Shop:" + " " + nameShop +
                 ", Product Type:" + "" + productType  +
                 ", Quantity Product:" + "" + quantityProduct;
 
