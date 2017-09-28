@@ -36,7 +36,7 @@ import java.util.stream.Stream;
 
         boolean toDo =  board.getToDoList().getTasks().add("Task 1");
         boolean inProgress = board.getInProgressList().getTasks().add("Task 2");
-        boolean done  =  board.getDoneList().getTasks().add("Task 3");
+        boolean done =  board.getDoneList().getTasks().add("Task 3");
 
 
         board.getToDoList().getTasks().stream().forEach(System.out::println);
@@ -46,9 +46,16 @@ import java.util.stream.Stream;
 
         Assert.assertEquals(toDo,true);
         Assert.assertEquals(inProgress,true);
-        Assert.assertEquals(done, true);
+        Assert.assertEquals(done,true);
 
+        Assert.assertEquals(board.getToDoList().getTasks().size(), 1);
+        Assert.assertEquals(board.getToDoList().getTasks().get(0), "Task 1");
 
+        Assert.assertEquals(board.getInProgressList().getTasks().size(),1);
+        Assert.assertEquals(board.getInProgressList().getTasks().get(0),"Task 2");
+
+        Assert.assertEquals(board.getDoneList().getTasks().size(),1);
+        Assert.assertEquals(board.getToDoList().getTasks().get(0),"Task 3");
         }
     }
 

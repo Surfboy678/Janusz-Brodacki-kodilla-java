@@ -14,7 +14,6 @@ public class ProductHealthyShop {
     public String getNameShop() {
         return nameShop;
     }
-
     public String getProductType() {
         return productType;
     }
