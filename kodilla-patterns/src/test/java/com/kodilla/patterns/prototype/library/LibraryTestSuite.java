@@ -18,7 +18,7 @@ public class LibraryTestSuite {
        library.getBooks().add(book1);
        library.getBooks().add(book2);
 
-        //making a shallow copy of object board
+        //making a shallow copy
        Library clonedLibrary = null;
        try {
            clonedLibrary = library.shallowCopy();
@@ -27,7 +27,7 @@ public class LibraryTestSuite {
            System.out.println(e);
        }
 
-        //making a deep copy of object board
+        //making a deep copy
        Library deepClonedLibrary = null;
        try {
            deepClonedLibrary = library.deepCopy();
