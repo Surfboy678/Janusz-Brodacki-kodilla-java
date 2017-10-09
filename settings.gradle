@@ -7,4 +7,5 @@ include 'kodilla-good-patterns'
 include 'trenig'
 include 'kodilla-spring-intro'
 include 'kodilla-patterns'
+include 'kodilla-jdbc'
 
