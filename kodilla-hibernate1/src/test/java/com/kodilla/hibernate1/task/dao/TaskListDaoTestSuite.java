@@ -1,5 +1,4 @@
-package com.kodilla.hibernate1.tasklist.dao;
-
+package com.kodilla.hibernate1.task.dao;
 
 import com.kodilla.hibernate1.task.TaskList;
 import com.kodilla.hibernate1.task.dao.TaskListDao;
@@ -33,7 +32,7 @@ public class TaskListDaoTestSuite {
         List<TaskList> readTasklist = taskListDao.findByListName(description);
 
         //Then
-        Assert.assertEquals(1,readTasklist.size());
+        Assert.assertEquals(0,readTasklist.size());
 
         //CleanUp
         taskListDao.delete(taskList);
