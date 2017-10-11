@@ -2,7 +2,7 @@ package com.kodilla.hibernate1.tasklist.dao;
 
 
 import com.kodilla.hibernate1.task.TaskList;
-import com.kodilla.hibernate1.task.TaskListDao;
+import com.kodilla.hibernate1.task.dao.TaskListDao;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +17,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskListDaoTestSuite {
+
     @Autowired
     private TaskListDao taskListDao;
     private static final String LISTNAME = "List Name";
