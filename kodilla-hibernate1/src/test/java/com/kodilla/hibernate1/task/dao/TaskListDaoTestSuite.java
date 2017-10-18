@@ -1,5 +1,7 @@
 package com.kodilla.hibernate1.task.dao;
 
+import com.kodilla.hibernate1.task.Task;
+import com.kodilla.hibernate1.task.TaskFinancialDetails;
 import com.kodilla.hibernate1.task.TaskList;
 import com.kodilla.hibernate1.task.dao.TaskListDao;
 import org.junit.Assert;
@@ -9,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -16,26 +19,52 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskListDaoTestSuite {
-
+    private static final String LISTNAME = "ToDo";
     @Autowired
     private TaskListDao taskListDao;
-    private static final String LISTNAME = "List Name";
 
     @Test
     public void testFindByListName(){
         //Given
-        TaskList taskList = new TaskList(LISTNAME,"listName");
+        TaskList taskList = new TaskList(LISTNAME, "The list contains tasks to perform.");
         taskListDao.save(taskList);
-        String description = taskList.getDescription();
 
         //When
-        List<TaskList> readTasklist = taskListDao.findByListName(description);
+        String listName = taskList.getListName();
+        List<TaskList> savedTaskList = taskListDao.findByListName(listName);
 
         //Then
-        Assert.assertEquals(0,readTasklist.size());
+        Assert.assertEquals(1, savedTaskList.size());
+        Assert.assertEquals(listName, savedTaskList.get(0).getListName());
 
         //CleanUp
-        taskListDao.delete(taskList);
+        taskListDao.delete(1);
+    }
+
+    @Test
+    public void testTaskListDaoSaveWithTasks() {
+        //Given
+        Task task = new Task("Test: Learn Hibernate", 14);
+        Task task2 = new Task("Test: Write some entities", 3);
+        TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(20), false);
+        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
+        task.setTaskFinancialDetails(tfd);
+        task2.setTaskFinancialDetails(tfd2);
+        TaskList taskList = new TaskList(LISTNAME, "ToDo tasks");
+        taskList.getTasks().add(task);
+        taskList.getTasks().add(task2);
+        task.setTaskList(taskList);
+        task2.setTaskList(taskList);
+
+        //When
+        taskListDao.save(taskList);
+        int id = taskList.getId();
+
+        //Then
+        Assert.assertNotEquals(0, id);
+
+        //CleanUp
+        taskListDao.delete(id);
     }
 
 }
