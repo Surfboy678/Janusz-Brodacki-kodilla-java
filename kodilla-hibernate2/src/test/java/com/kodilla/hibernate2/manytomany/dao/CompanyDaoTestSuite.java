@@ -98,7 +98,7 @@ public class CompanyDaoTestSuite {
         int id = softwareMachine.getId();
 
         //When
-        List<Company> companyName = companyDao.retrieveCompanyWhoseNameBegins("SOFa");
+        List<Company> companyName = companyDao.retrieveCompanyWhoseNameBegins("CORP");
 
         //Then
         try {
