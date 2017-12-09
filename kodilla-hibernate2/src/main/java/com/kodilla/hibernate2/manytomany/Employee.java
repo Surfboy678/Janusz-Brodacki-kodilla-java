@@ -5,8 +5,13 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(name = "Employee.retrieveEmployeeWithLastName",
-            query = "FROM Employee WHERE lastname = :LASTNAME")
+
+
+@NamedQuery(
+        name = "Employee.searchEmployeeByLastName",
+        query = "FROM Employee WHERE lastname LIKE :fragmentLastNameOfEmplyee"
+)
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
@@ -66,4 +71,8 @@ public class Employee {
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
+
+
+
 }
+
