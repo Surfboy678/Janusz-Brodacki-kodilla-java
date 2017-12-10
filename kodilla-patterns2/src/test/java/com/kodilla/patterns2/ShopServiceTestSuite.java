@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
 
-/*@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class ShopServiceTestSuite {
     @Autowired
@@ -60,4 +60,4 @@ public class ShopServiceTestSuite {
         }
     }
 
-        }*/
+        }
