@@ -17,16 +17,16 @@ public class FacebookTestingApp {
         driver.get("https://facebook.com");
 
         WebElement selectDay = driver.findElement(By.xpath(XPATH_SELECT_DAY));
-        Select selectD = new Select(selectDay);
-        selectD.selectByIndex(30);
+        Select daySelect = new Select(selectDay);
+        daySelect.selectByIndex(30);
 
         WebElement selectMonth = driver.findElement(By.xpath(XPATH_SELECT_MONTH));
-        Select selectM = new Select(selectMonth);
-        selectM.selectByIndex(01);
+        Select monthSelect = new Select(selectMonth);
+        monthSelect.selectByIndex(01);
 
         WebElement selectYear = driver.findElement(By.xpath(XPATH_SELECT_YEAR));
-        Select selectY = new Select(selectYear);
-        selectY.selectByIndex(45);
+        Select yearSelect = new Select(selectYear);
+        yearSelect.selectByIndex(45);
 
     }
 }
