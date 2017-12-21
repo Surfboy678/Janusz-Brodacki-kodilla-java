@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class MedianAdapter extends MedianAdaptee implements Classifier {
+/*public class MedianAdapter extends MedianAdaptee implements Classifier {
     @Override
     public int publicationYearMedian(Set<OldBook> oldBookSet) {
         Map<BookSignature, Book> books = new HashMap<>();
@@ -20,4 +20,4 @@ public class MedianAdapter extends MedianAdaptee implements Classifier {
         System.out.println(books.toString());
         return avaragePublicationYear(books);
     }
-}
+}*/

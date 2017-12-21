@@ -1,7 +1,7 @@
 package com.kodilla.patterns2.adapter.company;
 
 import com.kodilla.patterns2.adapter.bookclasifier.librarya.OldBook;
-import com.kodilla.patterns2.adapter.bookclasifier.librarya.bookclasifier.MedianAdapter;
+
 import org.junit.Test;
 
 import java.util.HashSet;
